@@ -169,7 +169,7 @@ export default function App() {
         <div className="nav-content">
           <div className="logo" onClick={() => setPage("search")}>
             <span className="logo-icon">◈</span>
-            <span className="logo-text">STOCKSENSE</span>
+            <span className="logo-text">STOCKTREND</span>
             <span className="logo-badge">AI</span>
           </div>
           <div className="nav-links">
