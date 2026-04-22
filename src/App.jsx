@@ -2,21 +2,22 @@ import { useState, useCallback, useEffect } from "react";
 import "./index.css";
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
+const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 const POSITIVE_WORDS = ["bullish", "surge", "soar", "rally", "gain", "profit", "growth", "upbeat", "optimistic", "beat", "raise", "upgrade", "buy", "recommend", "strong", "breakout", "record", "high", "jump", "rise", "positive", "recovery", "rebound", "success", "boom", "boost"];
 const NEGATIVE_WORDS = ["bearish", "crash", "plunge", "drop", "loss", "decline", "pessimistic", "downgrade", "sell", "weak", "breakdown", "low", "fall", "slide", "fear", "risk", "warning", "lawsuit", "investigation", "recall", "scandal", "miss", "fail", "bail", "bankruptcy", "concern", "pressure", "volatile"];
 
 // ─── HELPERS ──────────────────────────────────────────────────────────────────
 async function fetchNews(ticker) {
-  const url = `/api/yahoo/search?q=${encodeURIComponent(ticker)}&quotesCount=1&newsCount=8`;
+  const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(ticker)}&language=en&sortBy=publishedAt&pageSize=10&apiKey=${NEWS_API_KEY}`;
   const res = await fetch(url);
   if (!res.ok) throw new Error("Finance error: " + res.status);
   const data = await res.json();
-  const news = data.news?.slice(0, 8) || [];
-  return news.map(n => ({
-    title: n.title,
-    url: n.link,
-    source: { name: n.publisher || "Yahoo Finance" },
-    publishedAt: n.publishedAt || new Date().toISOString(),
+  const articles = data.articles?.filter(a => a.title && a.title !== "[Removed]") || [];
+  return articles.slice(0, 8).map(a => ({
+    title: a.title,
+    url: a.url,
+    source: { name: a.source?.name || "News Source" },
+    publishedAt: a.publishedAt || new Date().toISOString(),
   }));
 }
 
