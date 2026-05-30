@@ -1,4 +1,4 @@
-# 📊 StockTrend AI
+# StockTrend AI
 
 > **Know what the market is feeling. Right now.**
 > AI-powered stock sentiment analyzer — Bullish, Bearish, or Neutral in seconds.
@@ -27,7 +27,7 @@ Built for retail investors who don't have time to read 50 articles before making
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -39,7 +39,7 @@ Built for retail investors who don't have time to read 50 articles before making
 
 ---
 
-## 📸 How It Works
+## How It Works
 
 ```
 User types: AAPL
@@ -49,14 +49,14 @@ Alpha Vantage → fetches price, change %, trend
       ↓
 Sentiment Engine → analyzes both signals
       ↓
-Result: BULLISH 🟢 — with confidence score
+Result: BULLISH — with confidence score
 + plain-English summary of why
 + tagged headlines + key signals
 ```
 
 ---
 
-## 🔧 Getting Started (Run Locally)
+## Getting Started (Run Locally)
 
 ### 1. Clone the repo
 ```bash
@@ -77,9 +77,9 @@ VITE_NEWS_API_KEY=your_newsapi_key_here
 VITE_ALPHA_VANTAGE_API_KEY=your_alphavantage_key_here
 ```
 
-> 🔑 Get a free NewsAPI key at [newsapi.org/register](https://newsapi.org/register)
+> Get a free NewsAPI key at [newsapi.org/register](https://newsapi.org/register)
 >
-> 🔑 Get a free Alpha Vantage key at [alphavantage.co/support#api-key](https://www.alphavantage.co/support#api-key)
+ Get a free Alpha Vantage key at [alphavantage.co/support#api-key](https://www.alphavantage.co/support#api-key)
 
 ### 4. Run the development server
 ```bash
@@ -101,7 +101,7 @@ Or connect your GitHub repo directly at [vercel.com](https://vercel.com) for aut
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 StockTrend-AI/
@@ -126,7 +126,7 @@ StockTrend-AI/
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 StockTrend AI is built for **educational and portfolio purposes only.**
 Sentiment scores and summaries are **not financial advice.**
@@ -140,7 +140,7 @@ Always do your own research before making any investment decisions.
 
 ---
 
-## 📌 Roadmap
+## Roadmap
 
 - [ ] Fear & Greed visual meter
 - [ ] Multi-stock comparison mode
@@ -150,6 +150,10 @@ Always do your own research before making any investment decisions.
 
 ---
 
-## ⭐ Support
+## Support
 
 If you find this useful, drop a ⭐ on the repo — it helps a lot!
+
+---
+
+Made by Lohith ,powered by curiosity.
